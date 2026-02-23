@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Activités</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="activity1">
+
+    <h2>ACTIVITÉ #1 – RDV dans une friperie</h2>
+
+    <div class="images">
+        <a href="#">
+            <img src="image/frip.png">
+        </a>
+    </div>
+
+    <button onclick="showActivity(2)">Je choisis</button>
+<button onclick="showActivity(2)">Pas intéressée</button>
+
+</div>
+
+
+<div id="activity2" style="display:none;">
+    <h2>ACTIVITÉ #2 – AURA</h2>
+<div class="images">
+  <a href="#">
+  <img src="image/aura1.png">
+</a>
+</div>
+
+<div class="images">
+  <a href="#">
+  <img src="image/aura2.png">
+</a>
+</div>
+
+<div class="images">
+   <a href="#">
+  <img src="image/aura3.png">
+</a>
+</div>
+
+<div class="images">
+   <a href="#">
+  <img src="image/aura4.png">
+</a>
+</div>
+
+<div class="images">
+  <a href="#">
+  <img src="image/aura5.png">
+</a>
+</div>
+
+</p>
+    <button onclick="showActivity(3)">Je choisis</button>
+<button onclick="showActivity(3)">Pas intéressée</button>
+
+</div>
+
+<div id="activity3" style="display:none;">
+    <h2>ACTIVITÉ #3 – BACK TO REALITY</h2>
+<div class="images">
+ <a href="#">
+  <img src="image/realite.png">
+</a>
+</div>
+
+</p>
+    <p id="food" style="display:none; border:1px solid black; padding:10px;">
+        Nourriture inclue par l’organisateur
+    </p>
+<button onclick="showActivity(4)">Je choisis</button>
+</div>
+
+<div id="activity4" style="display:none;">
+    <h3>Activité finale : Musique + session d’écriture</h3>
+	<h4>** l'activité sera dévoilée seulement si elle est choisie</h4>
+</p>
+<div class="images">
+   <a href="#">
+  <img src="image/musique1.png">
+</a>
+</div>
+
+<div class="images">
+  <a href="#">
+  <img src="image/musique2.png">
+</a>
+</div>
+
+<div class="images">
+  <a href="#">
+  <img src="image/musique3.png">
+</a>
+</div>
+
+</p>
+<h4>Option de paiement :</h4>
+    <button onclick="finalChoice()">A) F*ck le féminisme !! Je suis dépendante de l’homme(L’homme
+paiera toutes les activités)</button>
+    <button onclick="finalChoice()">B) Vive le féminisme! Pouvoir aux femmes!(50/50)</button>
+</div>
+
+<p id="confirmation"></p>
+
+<script>
+function showActivity(num) {
+    document.getElementById("activity" + num).style.display = "block";
+}
+
+window.addEventListener("scroll", () => {
+    document.getElementById("food").style.display = "block";
+});
+
+function finalChoice() {
+    document.getElementById("confirmation").textContent =
+    "Pour confirmer le tout : veuillez texter vos choix de réponse au 514.995.1297 en plus du message suivant « Moi, mon sourire et mon air bête confirmons notre présence »";
+}
+
+</script>
+
+</body>
+</html>

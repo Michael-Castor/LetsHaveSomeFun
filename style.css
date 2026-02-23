@@ -1,0 +1,182 @@
+/* RESET DE BASE */
+* {
+    box-sizing: border-box;
+}
+
+/* STYLE GÉNÉRAL */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #ffe6ef;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255, 160, 190, 0.45) 0%, transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(255, 190, 210, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 200, 220, 0.45) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 170, 200, 0.35) 0%, transparent 45%),
+        linear-gradient(135deg, #ffe0ec 0%, #ffd1e3 50%, #ffbdd6 100%);
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+
+
+
+/* TITRES */
+h2, h3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* CONTENEURS D’ACTIVITÉS */
+div[id^="activity"] {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* IMAGES */
+img {
+    width: 220px;
+    max-width: 90%;
+    margin: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFFET AU SURVOL */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* LIENS IMAGES */
+a {
+    text-decoration: none;
+}
+
+/* BOUTONS */
+button {
+    margin: 30px 10px;
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    background-color: #111;
+    color: white;
+    cursor: pointer;
+    --scale: 1;
+    transform: scale(var(--scale));
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* HOVER BOUTON */
+button:hover {
+    background-color: #444;
+    transform: scale(var(--scale)) translateY(-2px);
+}
+
+/* MESSAGE NOURRITURE */
+#food {
+    margin: 30px auto;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    font-weight: 500;
+}
+
+/* MESSAGE FINAL */
+#confirmation {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* ANIMATION D’APPARITION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACTIVITÉS */
+div[id^="activity"] {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+div[id^="activity"] {
+    background: rgba(255, 230, 240, 0.65);
+    border-radius: 22px;
+    padding: 35px 25px;
+    margin: 60px auto;
+    max-width: 900px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    animation: fadeUp 0.8s ease forwards;
+}
+/* IMAGES */
+img {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* DÉCALAGE POUR CHAQUE IMAGE */
+img:nth-child(1) { animation-delay: 0.2s; }
+img:nth-child(2) { animation-delay: 0.4s; }
+img:nth-child(3) { animation-delay: 0.6s; }
+img:nth-child(4) { animation-delay: 0.8s; }
+img:nth-child(5) { animation-delay: 1s; }
+
+#yes {
+    transition: transform 0.3s ease;
+    background-color: #2ecc71; /* vert */
+}
+
+#yes:hover {
+    background-color: #27ae60;
+}
+
+#yes:disabled {
+    background-color: #a8e6c1; /* vert pâle */
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* OUI activé : vert normal */
+#yes:not(:disabled) {
+    background-color: #2ecc71;
+}
+
+#yes:not(:disabled):hover {
+    background-color: #27ae60;
+}
+
+/* Bouton NON */
+#no {
+    background-color: #e74c3c; /* rouge */
+}
+
+#no:hover {
+    background-color: #c0392b;
+}
