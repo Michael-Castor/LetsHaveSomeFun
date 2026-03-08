@@ -1,5 +1,5 @@
 const messages = [
-    "Êtes-tu sûre ?",
+    "Es-tu sûre ?",
     "Réfléchis encore !",
     "Dernière chance !",
     "Tu pourrais le regretter",
@@ -38,4 +38,5 @@ noBtn.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
     message.textContent = "Smart choice 🙂";
     link.style.display = "block";
+
 });
